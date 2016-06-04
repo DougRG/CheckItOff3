@@ -15,10 +15,10 @@
 		8C6567871D01F0D100A869DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C744D1CFF739900038D36 /* AppDelegate.swift */; };
 		8C6567881D01F0D400A869DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C744F1CFF739900038D36 /* ViewController.swift */; };
 		8C6567891D01F0D700A869DA /* tableViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C74641D00EB3C00038D36 /* tableViewCellTableViewCell.swift */; };
-		8C65678B1D01F0DC00A869DA /* Items+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C74701D01E6D800038D36 /* Items+CoreDataProperties.swift */; };
-		8C65678C1D01F0E000A869DA /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C74711D01E6D800038D36 /* Items.swift */; };
 		8C65678D1D01F12900A869DA /* CoreDataDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C746C1D01423900038D36 /* CoreDataDetails.swift */; };
 		8C65678E1D01F15800A869DA /* AddNewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C74621D00DFE300038D36 /* AddNewItemViewController.swift */; };
+		8C6567911D02920000A869DA /* Items+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C65678F1D02920000A869DA /* Items+CoreDataProperties.swift */; };
+		8C6567921D02920000A869DA /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6567901D02920000A869DA /* Items.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		8C0C74641D00EB3C00038D36 /* tableViewCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableViewCellTableViewCell.swift; sourceTree = "<group>"; };
 		8C0C74661D013B0D00038D36 /* Colors+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+CustomColors.swift"; sourceTree = "<group>"; };
 		8C0C746C1D01423900038D36 /* CoreDataDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDetails.swift; sourceTree = "<group>"; };
-		8C0C74701D01E6D800038D36 /* Items+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Items+CoreDataProperties.swift"; path = "../Items+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8C0C74711D01E6D800038D36 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Items.swift; path = ../Items.swift; sourceTree = "<group>"; };
+		8C65678F1D02920000A869DA /* Items+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Items+CoreDataProperties.swift"; path = "../Items+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8C6567901D02920000A869DA /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Items.swift; path = ../Items.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +74,8 @@
 				8C0C744F1CFF739900038D36 /* ViewController.swift */,
 				8C0C74641D00EB3C00038D36 /* tableViewCellTableViewCell.swift */,
 				8C0C74621D00DFE300038D36 /* AddNewItemViewController.swift */,
-				8C0C74701D01E6D800038D36 /* Items+CoreDataProperties.swift */,
-				8C0C74711D01E6D800038D36 /* Items.swift */,
+				8C65678F1D02920000A869DA /* Items+CoreDataProperties.swift */,
+				8C6567901D02920000A869DA /* Items.swift */,
 				8C0C74511CFF739900038D36 /* Main.storyboard */,
 				8C0C74571CFF739900038D36 /* Assets.xcassets */,
 				8C0C74591CFF739900038D36 /* LaunchScreen.storyboard */,
@@ -160,10 +160,10 @@
 				8C65678D1D01F12900A869DA /* CoreDataDetails.swift in Sources */,
 				8C65678E1D01F15800A869DA /* AddNewItemViewController.swift in Sources */,
 				8C6567871D01F0D100A869DA /* AppDelegate.swift in Sources */,
+				8C6567921D02920000A869DA /* Items.swift in Sources */,
 				8C6567891D01F0D700A869DA /* tableViewCellTableViewCell.swift in Sources */,
-				8C65678C1D01F0E000A869DA /* Items.swift in Sources */,
 				8C6567881D01F0D400A869DA /* ViewController.swift in Sources */,
-				8C65678B1D01F0DC00A869DA /* Items+CoreDataProperties.swift in Sources */,
+				8C6567911D02920000A869DA /* Items+CoreDataProperties.swift in Sources */,
 				8C6567861D01F0CD00A869DA /* Colors+CustomColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,8 +14,8 @@ import CoreData
 
 extension Items {
 
-    @NSManaged var listItem: String?
     @NSManaged var completeBy: NSDate?
     @NSManaged var done: NSNumber?
+    @NSManaged var listItem: String?
 
 }

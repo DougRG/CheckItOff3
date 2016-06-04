@@ -32,7 +32,7 @@ class AddNewItemViewController: UIViewController, UITextFieldDelegate {
     
     func saveButtonTapped() {
         CoreDataDetails.save(listItem.text!, completeBy: dateDue, done: false)
-        listItem.text = ""
+        
     }
    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
