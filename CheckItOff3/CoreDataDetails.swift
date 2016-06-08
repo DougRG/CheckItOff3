@@ -37,7 +37,18 @@ class CoreDataDetails: NSObject {
     }
 
     static func save(listItem: String, completeBy: NSDate, done: Bool) {
+        let managedObject = getManagedObject()
+        let toBeDone = NSEntityDescription.insertNewObjectForEntityForName("Items", inManagedObjectContext: managedObject) as! Items
+        toBeDone.done = done
+        toBeDone.completeBy = completeBy
+        toBeDone.listItem = listItem
         
+        do {
+            try managedObject.save()
+        }
+        catch {
+            print("Error")
+        }
     }
     
     static func update(listItem: Items) {
