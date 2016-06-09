@@ -20,7 +20,7 @@ class AddNewItemViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 42/255, green: 182/255, blue: 200/255, alpha: 1.0)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .Plain, target: self, action: #selector(saveButtonTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .Plain, target: self, action: #selector(AddNewItemViewController.saveButtonTapped))
         navigationItem.rightBarButtonItem?.tintColor = UIColor(colorLiteralRed: 241/255, green: 233/255, blue: 193, alpha: 1.0)
         
     }
@@ -31,13 +31,13 @@ class AddNewItemViewController: UIViewController, UITextFieldDelegate {
     }
     
     func saveButtonTapped() {
-                
+        CoreDataDetails.save(itemTextField.text!, completeBy: dateDue, done: false)
     }
    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
-        return false
+        return true
         
     }
     

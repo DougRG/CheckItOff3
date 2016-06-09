@@ -33,7 +33,7 @@
 		8C0C74621D00DFE300038D36 /* AddNewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewItemViewController.swift; sourceTree = "<group>"; };
 		8C0C74641D00EB3C00038D36 /* tableViewCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableViewCellTableViewCell.swift; sourceTree = "<group>"; };
 		8C0C74661D013B0D00038D36 /* Colors+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+CustomColors.swift"; sourceTree = "<group>"; };
-		8C0C746C1D01423900038D36 /* CoreDataDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDetails.swift; sourceTree = "<group>"; };
+		8C0C746C1D01423900038D36 /* CoreDataDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataDetails.swift; path = ../CoreDataDetails.swift; sourceTree = "<group>"; };
 		8C65678F1D02920000A869DA /* Items+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Items+CoreDataProperties.swift"; path = "../Items+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8C6567901D02920000A869DA /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Items.swift; path = ../Items.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,6 @@
 		8C0C74411CFF739900038D36 = {
 			isa = PBXGroup;
 			children = (
-				8C0C746C1D01423900038D36 /* CoreDataDetails.swift */,
 				8C0C744C1CFF739900038D36 /* CheckItOff3 */,
 				8C0C744B1CFF739900038D36 /* Products */,
 			);
@@ -69,13 +68,14 @@
 		8C0C744C1CFF739900038D36 /* CheckItOff3 */ = {
 			isa = PBXGroup;
 			children = (
-				8C0C74661D013B0D00038D36 /* Colors+CustomColors.swift */,
 				8C0C744D1CFF739900038D36 /* AppDelegate.swift */,
 				8C0C744F1CFF739900038D36 /* ViewController.swift */,
 				8C0C74641D00EB3C00038D36 /* tableViewCellTableViewCell.swift */,
 				8C0C74621D00DFE300038D36 /* AddNewItemViewController.swift */,
+				8C0C746C1D01423900038D36 /* CoreDataDetails.swift */,
 				8C65678F1D02920000A869DA /* Items+CoreDataProperties.swift */,
 				8C6567901D02920000A869DA /* Items.swift */,
+				8C0C74661D013B0D00038D36 /* Colors+CustomColors.swift */,
 				8C0C74511CFF739900038D36 /* Main.storyboard */,
 				8C0C74571CFF739900038D36 /* Assets.xcassets */,
 				8C0C74591CFF739900038D36 /* LaunchScreen.storyboard */,

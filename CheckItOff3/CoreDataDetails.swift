@@ -35,24 +35,45 @@ class CoreDataDetails: NSObject {
         }
         return resultsManagedObject
     }
-
-    static func save(listItem: String, completeBy: NSDate, done: Bool) {
+    
+    static func save(listItem:String, completeBy:NSDate, done:Bool) {
         let managedObject = getManagedObject()
-        let toBeDone = NSEntityDescription.insertNewObjectForEntityForName("Items", inManagedObjectContext: managedObject) as! Items
-        toBeDone.done = done
-        toBeDone.completeBy = completeBy
-        toBeDone.listItem = listItem
+        let item = NSEntityDescription.insertNewObjectForEntityForName("Items", inManagedObjectContext: managedObject) as! Items
+        item.done = done
+        item.completeBy = completeBy
+        item.listItem = listItem
         
         do {
             try managedObject.save()
         }
         catch {
-            print("Error")
+            print("save: Error saving.")
         }
     }
     
+    
+    
     static func update(listItem: Items) {
+        let managedObject = getManagedObject()
         
+        do {
+            let request = NSFetchRequest(entityName: "Items")
+            request.predicate = NSPredicate(format: "listItem=%@ and completeBy=%@", listItem.listItem!, listItem.completeBy!)
+            
+            let results = try managedObject.executeFetchRequest(request)
+            let resultSet = results as! [Items]
+            resultSet[0].done = listItem.done
+        }
+        catch {
+            
+        }
+        
+        do{
+            try managedObject.save()
+        }
+        catch {
+            print("Error")
+        }
     }
     
     

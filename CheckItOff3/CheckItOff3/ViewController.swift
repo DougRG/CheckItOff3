@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var lastChance: [Items] = []
     var items: [Items] = []
     var thisWeek: [Items] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -56,7 +56,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         thisWeekTable.reloadData()
         itemsTable.reloadData()
     }
-
+    
+    func cellDateFormat(date: NSDate) -> String {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "MMM/dd"
+        return formatter.stringFromDate(date)
+    }
+    
+    
     //MARK: TableViewDataSource Protocols and Stuff
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -81,20 +88,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if(tableView == lastChanceTable) {
             let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
             let item = lastChance[indexPath.row]
-            cell.textLabel!.text = String(format: "%@: %@", item.listItem!, item.completeBy!)
+            cell.textLabel!.text = String(format: "%@: %@", item.listItem!,  cellDateFormat(item.completeBy!))
             
             return cell
         }
         else if (tableView == thisWeekTable) {
             let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
             let item = thisWeek[indexPath.row]
-            cell.textLabel!.text = String(format: "%@: %@", item.listItem!, item.completeBy!)
+            cell.textLabel!.text = String(format: "%@: %@", item.listItem!, cellDateFormat(item.completeBy!))
             
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! tableViewCellTableViewCell
             let item = items[indexPath.row]
-            cell.textLabel!.text = String(format: "%@: %@", item.listItem!, item.completeBy!)
+            cell.textLabel!.text = String(format: "%@: %@", item.listItem!, cellDateFormat(item.completeBy!))
             cell.checkbox.text = "◻️"
             if(item.done == true) {
                 cell.checkbox.text = "☑️"
@@ -103,6 +110,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return cell
         }
     }
-
+    
+    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        if (tableView.isEqual(itemsTable)){
+            let item = items[indexPath.row]
+            let cell = tableView.cellForRowAtIndexPath(indexPath) as! tableViewCellTableViewCell
+            if (cell.checkbox.text == "☑️"){
+                cell.checkbox.text = "◻️"
+                item.done = false
+            }
+            else {
+                cell.checkbox.text = "☑️"
+                item.done = true
+            }
+            
+            CoreDataDetails.update(item)
+        }
+        
+        
+        return indexPath
+    }
+    
 }
 
